@@ -1,2 +1,2 @@
 # page-contact
-VerificaCción de datos de envío
+Verificación de datos de envío
