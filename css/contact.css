@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:focus{
+	outline: none;
+}
+body{
+	background: #E9F5D4;
+	font-family: 'Ranchers', cursive;
+}
+
+/*FORM ------------------*/
+.form-wrap{
+	width: 1050px;
+	height: 530px;
+	margin: 50px auto;
+	background: #fff;
+	display: flex;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 0px 20px rgba(0,0,0, 0.2);
+}
+/*INFORMACION-ONTACTO ------------*/
+.contact-info::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #297D93;
+	opacity: 0.9;
+}
+.contact-info{
+	width: 38%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+
+	background-image: url('../img/contact.png');
+	background-size: cover;
+	background-position: center center;
+}
+.info-title{
+	margin-bottom: 60px;
+}
+.info-title span{
+	font-size: 100px;
+	display: block;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.info-title h2{
+	font-size: 35px;
+	text-align: center;
+}
+.info-items p{
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.info-items p:nth-child(1) span{
+	font-size: 30px;
+	margin-right: 10px;
+}
+.info-items p:nth-child(2) span{
+	font-size: 50px;
+	margin-right: 15px;
+	margin-left: 4px
+}
+.info-title, .info-items{
+	position: relative;
+	z-index: 2;
+	color: #fff;
+}
+/*FORMULARIO DE CONTACTO ---------------*/
+form.form-contact{
+	width: 62%;
+	padding: 30px 40px;
+}
+form.form-contact h2{
+	font-size: 25px;
+	font-weight: 600;
+	color: #303030;
+	margin-bottom: 30px;
+}
+form.form-contact .user-info{
+	display: flex;
+	flex-direction: column;
+}
+form.form-contact label{
+	font-weight: 600;
+}
+form.form-contact input, 
+form.form-contact textarea{
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #D1D1D1;
+	padding: 8px 0px 5px;
+	margin-bottom: 20px;
+
+	font-family: 'Ranchers', cursive;
+	color: #5A5A5A;
+	font-size: 14px;
+	font-weight: 400px;
+}
+form.form-contact textarea{
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 90px;
+}
+form.form-contact input[type="button"]{
+	width: 180px;
+	color: #fff;
+	background: #186E69;
+	padding: 18px;
+	border: none;
+	border-radius: 25px;
+
+	align-self: flex-end;
+	font-family: 'Ranchers', cursive;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+form.form-contact input[type="button"]:hover{
+	 background: #080654;
+}
+
+/*--- VENTADA MODAL DE CONTACTO ---*/
+.modal-wrap{
+	width: 100%;
+	height: 100vh;
+	background: rgba(36,36,53,0.5); 
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.message-modal{
+	background: #C2E5D6;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	width: 400px;
+	padding: 30px 20px 15px;
+}
+.message-modal h3{
+	text-align: center;
+	font-family: 'Ranchers', cursive;
+	font-size: 20px;
+	font-weight: 400;
+	color: #000;
+}
+.message-modal h3:after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #06716C;
+	margin: 10px 0px 15px;
+}
+.message-modal p{
+	font-size: 16px;
+	color: #00334C;
+}
+.message-modal p:before{
+	content: '\f00d';
+	font-family: FontAwesome;
+	display: inline-block;
+	color: #023858;
+	margin: 8px
+}
+.message-modal #btnClose{
+	display: inline-block;
+	padding: 3px 10px;
+	margin-top: 10px;
+
+	background: #00507E;
+	color: #fff;
+	border: 2px solid #000;
+	cursor: pointer;
+	float: right;
+}
